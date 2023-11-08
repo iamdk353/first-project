@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>converter</title>
+  <link rel="stylesheet" href="converter.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <div class="primary">
+    <!-- main div to contain all the code and used for media queries -->
+    <div class="output">
+      <button class="domain">
+        <span class="material-symbols-outlined">
+          calculate
+        </span>
+      </button>
+      <div class="display">
+        <div class="from">
+          <div class="DomainOptions">
+            <ul class="DomainList">
+            </ul>
+          </div>
+          <div class="unit jsFrom">FROM UNIT
+          </div>
+          <button class="more fromBtn">></button>
+          <input class="value" type="number" />
+        </div>
+        <div class="to">
+          <div class="unit jsTo">TO UNIT
+
+          </div>
+          <button class="more toBtn">></button>
+          <input class="value noevent" type="number" />
+        </div>
+      </div>
+      <div class="options">
+        <ul class="list">
+        </ul>
+      </div>
+
+    </div>
+    <div class="input">
+
+    </div>
+  </div>
+  <script src="../../../docx/gsap/gsap.min.js"></script>
+  <script src="unitsData.js"></script>
+  <script src="converter.js"></script>
+</body>
+
+</html>
+
+<!-- 
+
+1. `<!DOCTYPE html>`: Specifies the document type and version of HTML.
+
+2. `<html lang="en">`: The root HTML element, indicating that the document is in English.
+
+3. `<head>`: Contains metadata and links to external resources like stylesheets and scripts.
+
+   - `<meta charset="UTF-8">`: Specifies the character encoding as UTF-8.
+
+   - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: Sets the viewport for responsive design.
+
+   - `<title>converter</title>`: Sets the title of the web page to "converter."
+
+   - `<link rel="stylesheet" href="converter.css">`: Links an external CSS file named "converter.css."
+
+   - `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">`: Links an external font stylesheet from Google Fonts.
+
+4. `<body>`: The main content of the web page.
+
+   - `<div class="primary">`: A container for the entire content and used for media queries.
+
+   - `<div class="output">`: Contains the converter interface.
+
+     - `<button class="domain">`: A button for calculating conversions.
+
+       - `<span class="material-symbols-outlined">calculate</span>`: A span element containing the text "calculate" with a specific font icon.
+
+     - `<div class="display">`: The main area for displaying conversion information.
+
+       - `<div class="from">`: Represents the "from" section of the conversion.
+
+         - `<div class="DomainOptions">`: Container for domain options.
+
+           - `<ul class="DomainList">`: A list for displaying domain options. This list is initially empty and likely populated dynamically.
+
+         - `<div class="unit jsFrom">FROM UNIT</div>`: A unit display element that shows the "from" unit.
+
+         - `<button class="more fromBtn">></button>`: A button for expanding or revealing more options.
+
+         - `<input class="value" />`: An input field for entering values to be converted.
+
+       - `<div class="to">`: Represents the "to" section of the conversion.
+
+         - `<div class="unit jsTo">TO UNIT</div>`: A unit display element that shows the "to" unit.
+
+         - `<button class="more toBtn">></button>`: A button for expanding or revealing more options.
+
+         - `<input class="value" />`: An input field for displaying the converted result.
+
+     - `<div class="options">`: Contains a list of options.
+
+       - `<ul class="list">`: A list for displaying conversion options. This list is likely populated dynamically.
+
+   - `<div class="input">`: An empty container for potential input elements or other content.
+
+5. `<script src="../../../docx/gsap/gsap.min.js"></script>`: Links an external JavaScript library, GreenSock Animation Platform (GSAP).
+
+6. `<script src="unitsData.js"></script>`: Links an external JavaScript file named "unitsData.js" (used for unit data).
+
+7. `<script src="converter.js"></script>`: Links an external JavaScript file named "converter.js" (used for the converter application).
+
+This HTML structure sets up the foundation for a converter application with UI elements for selecting units, entering values, and calculating conversions. It also links external CSS and JavaScript files to style and provide functionality to the application. -->

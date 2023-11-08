@@ -1,0 +1,231 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  font-family: sans-serif, Arial, Helvetica;
+  transition: all 0.25s;
+  user-select: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+/* Remove arrows from number input fields */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  /* Optional, removes the gap */
+}
+
+
+
+body {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary {
+  width: 90%;
+  height: 90%;
+  background-color: rgba(255, 242, 225, 0.779);
+  border-radius: 20px;
+  box-shadow: 3px 4px 3px 1px rgb(237, 182, 115);
+}
+
+.output {
+  height: 50%;
+  position: relative;
+
+}
+
+.display {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  transform: translate(10%, -50%);
+  background-color: rgba(179, 179, 179, 0.754);
+  border-radius: 20px;
+}
+
+.input {
+  height: 50%;
+}
+
+.from,
+.to {
+  height: 35%;
+  width: 70%;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  font-size: 15px;
+  color: rgb(133, 133, 133);
+  padding: 5px 0px 0px 5px;
+}
+
+.from {
+  top: 18px;
+  left: 18px;
+}
+
+.to {
+  bottom: 18px;
+  right: 18px;
+}
+
+.unit {
+  font-size: 15px;
+  color: rgb(133, 133, 133);
+  padding: 5px 0px 0px 5px;
+  display: inline;
+}
+
+.value {
+  font-size: 30px;
+  color: rgb(1, 1, 1);
+  padding: 5px 0px 0px 5px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 15px;
+  border: none;
+  height: 40%;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-radius: 5px;
+  width: 80%;
+  left: 10px;
+}
+
+.value:focus {
+  box-shadow: 2px 4px 8px rgba(255, 159, 57, 0.522);
+  outline: none;
+}
+
+.value::selection {
+  background-color: rgb(255, 163, 42);
+}
+
+.convert {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid black;
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  top: 42%;
+  right: 50%;
+}
+
+.domain {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(83, 83, 83);
+  border: none;
+  position: absolute;
+  left: 60px;
+  cursor: pointer;
+  top: 10px;
+  border-radius: 2px;
+}
+
+.domain span {
+  filter: invert();
+}
+
+.DomainOptions {
+  background-color: rgb(239, 152, 47);
+  position: absolute;
+  width: 50%;
+  height: 0%;
+  overflow-y: scroll;
+  z-index: 200;
+  display: none;
+  border-radius: 10px;
+
+}
+
+.more {
+  width: 15px;
+  height: 15px;
+  margin-bottom: 5px;
+  background-color: rgba(245, 245, 220, 0);
+  border: none;
+  color: rgb(133, 133, 133);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.options {
+  background-color: rgb(255, 166, 57);
+  width: 20vw;
+  height: 80vh;
+  position: absolute;
+  z-index: 15;
+  border-radius: 20px;
+  display: none;
+  left: -100px;
+  opacity: 0;
+}
+
+.options ul,
+.DomainOptions ul {
+  list-style: none;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 5px 0px 10px 0px;
+  position: relative;
+
+}
+
+.options ul li,
+.DomainOptions ul li {
+  height: 6vh;
+  background-color: rgba(255, 255, 255, 0.747);
+  cursor: pointer;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 5px;
+  padding-top: 1.5vh;
+  justify-content: center;
+}
+
+.options ul li:hover,
+.DomainOptions ul li:hover {
+  transform: scale(1.05);
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+@media(width:320px) {
+  .options {
+    width: 50vw;
+  }
+
+  .DomainOptions {
+    width: 50vw;
+  }
+
+  .domain {
+    top: -1px;
+    left: 5px;
+  }
+
+  .value {
+    left: -2px;
+  }
+}
